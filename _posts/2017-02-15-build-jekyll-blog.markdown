@@ -17,26 +17,20 @@ tags:
 
 ## 环境准备  
 搭建jekyll前你的系统需要准备好[jekyll搭建环境](https://jekyllrb.com/docs/installation/#requirements/)
-> 1.GNU/Linux, Unix, 或者 macOS  
-> 2.Ruby 2.0或者以上版本  
-> 3.GCC 和 Make，你可以在命令行下输入gcc -v 和 make -v查看是否安装   
+
+> GNU/Linux, Unix, 或者 macOS  
+> Ruby 2.0或者以上版本  
+> GCC 和 Make，你可以在命令行下输入gcc -v 和 make -v查看是否安装   
 
 由于我是使用mac OS X操作系统，并且安装了Xcode开发工具，因此很多环境都已经自带了，因此不需要安装准备任何环境，只需要很简单的命令行就可以完成jekyll环境的安装。
 
 ## 搭建jekyll步骤  
-[Jekyll官网](https://jekyllrb.com/docs/quickstart/)有具体的快速搭建jekyll的向导，具体搭建步骤是在terminal或者其他命令行工具中依次输入以下命令完成jekyll的安装：
+[Jekyll官网](https://jekyllrb.com/docs/quickstart/)有具体的快速搭建jekyll的向导，具体搭建步骤是通过RubyGems安装Jekyll 和 Bundler gems,建立jekyll站点文件夹myblog, 进入你刚刚创建的文件夹启动建立的jekyll站点服务。该过程在terminal或者其他命令行工具中命令如下：
 
-> 通过RubyGems安装Jekyll 和 Bundler gems   
->> ~ $ gem install jekyll bundler  
->
-> 创建jekyll站点文件夹 ./myblog  
->> ~ $ jekyll new myblog  
->
-> 进入你刚刚创建的文件夹  
->> ~ $ cd myblog  
->
-> 启动建立的jekyll站点服务   
->> ~/myblog $ bundle exec jekyll serve
+> ~ $ gem install jekyll bundler  
+> ~ $ jekyll new myblog  
+> ~ $ cd myblog  
+> ~/myblog $ bundle exec jekyll serve
 
 现在你可以通过 http://localhost:4000 看到jekyll已经搭建好了的默认页面
 
