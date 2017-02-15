@@ -68,7 +68,7 @@ ba_track_id: 1988753ea8c1ed939fb2c0ff638ce39f
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "代码人生，孜孜不倦的码农"
-sidebar-avatar: assets/images/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /assets/images/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
