@@ -1,10 +1,10 @@
 # Site settings
 title: Jannon Blog
-SEOTitle: Huangzineng的博客 | Jannon Blog
-header-img: assets/images/homepage.jpg
+SEOTitle: HuangZineng的博客 | Jannon Blog
+header-img: images/homepage-bg.jpg
 email: hznhappy@163.com
-description: "知行合一，止于至善"
-keyword: "Jan"
+description: "Jannon Blog"
+keyword: "Jan,Jannon,Jannon Blog,@hznhappy,hznhappy,博客"
 url: "https://hznhappy.githbu.io"              # your host, for absolute URL
 baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -61,14 +61,18 @@ kramdown:
 # Baidu Analytics
 ba_track_id: 1988753ea8c1ed939fb2c0ff638ce39f
 
+# Google Analytics
+#ga_track_id: 'UA-92063772-1'            # Format: UA-xxxxxx-xx
+#ga_domain:
+
 
 
 
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "代码人生，孜孜不倦的码农"
-sidebar-avatar: /assets/images/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "知者不惑，勇者无惧<br>诚者有信，仁者无敌"
+sidebar-avatar: /images/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 

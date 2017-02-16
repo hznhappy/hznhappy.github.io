@@ -1,12 +1,12 @@
 ---
 layout:     post
 title:      "jekyll+github pages搭建自己的博客"
-subtitle:   "利用github pages和jekyll搭建自己的博客"
+subtitle:   "github pages+jekyll搭建自己的博客"
 date:       2017-02-15
 author:     "Jannon"
-header-img: "assets/images/2017/commandblog-bg.jpg"
+header-img: "images/2017/bulid-jekyll-blog.jpg"
 tags:
-    - Blog
+    - Jekyll
 ---
 
 > 这是我的第一篇博客
