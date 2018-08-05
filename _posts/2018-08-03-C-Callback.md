@@ -11,6 +11,7 @@ tags:
 
 ## C语言回调函数
 C语言常常需要设置一些回调函数，在合适的时候进行回调函数调用达到反馈结果的作用。
+
 1.定义一个回调函数指针
 > typedef void (*event_cb_t)(const struct event *evt, void *userdata);
 
