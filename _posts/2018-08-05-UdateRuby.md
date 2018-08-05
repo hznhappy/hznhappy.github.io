@@ -23,7 +23,7 @@ $ source ~/.bash_profile
 $ rvm -v
 rvm 1.29.4 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
 ```
- ## 升级Ruby
+## 升级Ruby
  1.查看rvm可升级ruby版本列表：
  ``` bash
  $ rvm list known
