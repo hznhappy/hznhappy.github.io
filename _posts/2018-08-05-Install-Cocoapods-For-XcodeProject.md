@@ -56,11 +56,14 @@ Generating Pods project
 Integrating client project
 ```
 执行完成之后，需要使用`AFNetWorkingDemo.xcworkspace`文件来打开工程即可在项目中使用第三方库。工程目录如下：  
-![cocoapods工程目录结构](images/2018/cocoapodsDemo.png)
+![cocoapods工程目录结构](https://hznhappy.github.io/images/2018/cocoapodsDemo.png)
 
 ## 注意事项
 1.Podfile和Podfile.lock  
+
 Podfile是指定要使用的所有第三方库各种信息的文件，包括版本信息。Podfile.lock文件是对已经安装的第三方库版本追踪文件，用于保持版本的一致性。该文件由`pod install`和`pod update`命令生成。这两个文件一般需要添加到版本控制管理中，这样可以保证项目中所有人使用的第三方库版本保持一致。如项目来了一个新人，clone好项目之后，调用`pod install`命令添加第三方库，cocoapods就会根据Podfile.lock文件安装好对应版本的第三方库。
 `pod install`命令只有第一次还没有生成Podfile.lock文件的时候调用才会生成Podfile.lock文件，否则都是会根据Podfile.lock文件来进行安装操作。  
+
 2.添加和删除第三方库  
+
 添加或者删除一个第三方库的时候要用`pod install`命令，查看是否有可以升级的第三方库用`pod outdated`命令。更新需要升级的第三方库是使用`pod update PODNAME`命令。如果不带参数的调用`pod update`命令，就会更新Podfile中所列的所有第三方库到最新版本。此时会重新生成一个新的Podfile.lock文件。
