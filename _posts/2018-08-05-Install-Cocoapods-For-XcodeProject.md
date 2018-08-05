@@ -65,4 +65,14 @@ Podfile是指定要使用的所有第三方库各种信息的文件，包括版�
 
 2.添加和删除第三方库  
 
-添加或者删除一个第三方库的时候要用`pod install`命令，查看是否有可以升级的第三方库用`pod outdated`命令。更新需要升级的第三方库是使用`pod update PODNAME`命令。如果不带参数的调用`pod update`命令，就会更新Podfile中所列的所有第三方库到最新版本。此时会重新生成一个新的Podfile.lock文件。
+添加或者删除一个第三方库的时候要用`pod install`命令，查看是否有可以升级的第三方库用`pod outdated`命令。更新需要升级的第三方库是使用`pod update PODNAME`命令。如果不带参数的调用`pod update`命令，就会更新Podfile中所列的所有第三方库到最新版本。此时会重新生成一个新的Podfile.lock文件。  
+
+`pod install`命令的官方文档描述如下：
+
+>This is to be used the first time you want to retrieve the pods for the project, but also every time you edit your Podfile to add, update or remove a pod.
+
+>* Every time the pod install command is run — and downloads and install new pods — it writes the version it has installed, for each pods, in the Podfile.lock file. This file keeps track of the installed version of each pod and locks those versions.
+
+>* When you run pod install, it only resolves dependencies  for pods that are not already listed in the Podfile.lock.
+   * For pods listed in the Podfile.lock, it downloads the explicit version listed in the Podfile.lock without trying to check if a newer version is available
+   * For pods not listed in the Podfile.lock yet, it searches for the version that matches what is described in the Podfile (like in pod 'MyPod', '~>1.2')
