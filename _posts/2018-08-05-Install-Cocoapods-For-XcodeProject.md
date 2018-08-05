@@ -6,7 +6,6 @@ date:       2018-08-05
 author:     "Jannon"
 header-img: "images/tags-bg.jpg"
 tags:
-    - iOS
     - cocoapods
 ---
 

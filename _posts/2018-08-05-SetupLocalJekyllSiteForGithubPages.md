@@ -6,7 +6,6 @@ date:       2018-08-05
 author:     "Jannon"
 header-img: "images/about-bg.jpg"
 tags:
-    - jekyll
     - blog
 ---
 
