@@ -1,17 +1,16 @@
 ---
 layout:     post
-title:      "C语言的回调Callback"
-subtitle:   "C回调函数的使用"
+title:      "C语言回调函数"
+subtitle:   "Callback function"
 date:       2018-08-03
 author:     "Jannon"
-header-img: "images/command-line.jpg"
+header-img: "images/about-bg.jpg"
 tags:
     - C
 ---
 
 ## C语言回调函数
-C语言常常需要设置一些回调函数，在合适的时候进行回调函数调用处理达到反馈结果的作用。
-如以下列子：
+C语言常常需要设置一些回调函数，在合适的时候进行回调函数调用达到反馈结果的作用。
 1.定义一个回调函数指针
 > typedef void (*event_cb_t)(const struct event *evt, void *userdata);
 
