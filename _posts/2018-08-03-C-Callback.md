@@ -19,20 +19,22 @@ C语言常常需要设置一些回调函数，在合适的时候进行回调函�
 > int event_cb_register(event_cb_t cb, void *userdata);
 
 3.定义回调函数的实现
-> static void my_event_cb(const struct event *evt, void *data)
-> {
->   /* 回调函数应该要做的处理代码 */
-> }
+```
+static void my_event_cb(const struct event *evt, void *data)
+{
+ /* 回调函数应该要做的处理代码 */
+}
+```
 
 4.调用将回调函数作为参数的函数
 > event_cb_register(my_event_cb, &my_custom_data);
 
 也可以将回调函数定义到一个结构体中
-> struct event_cb {
->     event_cb_t cb;
->     void *data;
-> };
-
+```struct event_cb {
+    event_cb_t cb;
+    void *data;
+};
+```
 通过如下方式进行回调
 
 ``` c
