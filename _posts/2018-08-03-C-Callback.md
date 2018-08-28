@@ -30,7 +30,8 @@ static void my_event_cb(const struct event *evt, void *data)
 > event_cb_register(my_event_cb, &my_custom_data);
 
 也可以将回调函数定义到一个结构体中
-```struct event_cb {
+```
+struct event_cb {
     event_cb_t cb;
     void *data;
 };
