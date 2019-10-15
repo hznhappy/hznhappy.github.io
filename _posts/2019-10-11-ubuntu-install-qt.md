@@ -91,4 +91,5 @@ source /etc/profile
 ``` shell
 chmod +x qt-creator-linux-x86-opensource-2.4.1.bin
 ./qt-creator-linux-x86-opensource-2.4.1.bin
+```
 根据安装向导完成qt开发工具qt creator的安装，至此安装完毕，可以开始qt编程开发。

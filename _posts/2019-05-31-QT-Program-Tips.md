@@ -134,3 +134,100 @@ apple
     qDebug()<<mm<<array.size()<<array.toHex()<<kk.toHex().size();
 
 ```
+
+## QT日志打印
+同时打印日志到文件和控制台
+``` C++
+void printLog(QtMsgType type, const QMessageLogContext &context, const QString &msg)
+{
+    static QMutex mutex;
+
+    mutex.lock();
+
+    QString text;
+    switch(type)
+    {
+
+    case QtDebugMsg:
+        fprintf(stderr, "%s \n", msg.toLocal8Bit().constData());
+        break;
+
+    case QtWarningMsg:
+        fprintf(stderr, "Warning:%s \n", msg.toLocal8Bit().constData());
+        break;
+
+    case QtCriticalMsg:
+        fprintf(stderr, "Critical:%s \n", msg.toLocal8Bit().constData());
+        break;
+
+    case QtFatalMsg:
+        fprintf(stderr, "Fatal:%s \n", msg.toLocal8Bit().constData());
+    }
+
+    switch(type)
+    {
+
+    case QtDebugMsg:
+        text = QString("Debug:");
+        break;
+
+    case QtWarningMsg:
+        text = QString("Warning:");
+        break;
+
+    case QtCriticalMsg:
+        text = QString("Critical:");
+        break;
+
+    case QtFatalMsg:
+        text = QString("Fatal:");
+    }
+
+    //QString context_info = QString("File:(%1) Line:(%2)").arg(QString(context.file)).arg(context.line);
+
+    QString current_date_time = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss ddd");
+
+    QString current_date = QString("(%1)").arg(current_date_time);
+
+    QString message = QString("%1 %2 %3").arg(text).arg(msg).arg(current_date);
+
+    QString appDirString = QCoreApplication::applicationDirPath() + "/Logs";
+    QDir d(appDirString);
+    if(!d.exists())
+        d.mkdir(appDirString);
+
+    QString logFile = appDirString + "/log_1.txt";
+    QString backFile = appDirString + "/log_0.txt";
+
+    QFile file(logFile);
+
+    file.open(QIODevice::WriteOnly | QIODevice::Append);
+
+    if (file.size() >= 1 * 1024 * 1024) //文件达到1M后先备份再清空
+    {
+        QFile::remove(backFile);//删除原来的备份文件
+        file.copy(backFile);    //拷贝文件至备份文件
+        file.resize(0);             //清空文件内容
+    }
+
+    QTextStream text_stream(&file);
+
+    text_stream << message << "\r\n";
+
+    file.flush();
+
+    file.close();
+
+    mutex.unlock();
+
+}
+
+MainWindow::MainWindow(QWidget *parent) :
+    QMainWindow(parent),
+    ui(new Ui::MainWindow)
+{
+    ui->setupUi(this);
+    qInstallMessageHandler(printLog);
+}
+
+```
