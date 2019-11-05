@@ -38,7 +38,7 @@ netsh wlan show profile name="PekingUniversity" key=clear
 
 如果出现找不到配置文件，使用管理员命令行进行重新输入命令即可，结果如下：
 ``` shell
-netsh wlan show profile name="PekingUniversity"
+netsh wlan show profile name="PekingUniversity" key=clear
 
 接口 WLAN 上的配置文件 PekingUniversity:
 =======================================================================
@@ -164,4 +164,10 @@ netsh wlan set hostednetwork mode=allow ssid=tests key=tests123
 netsh wlan start hostednetwork
 
 netsh wlan show hostednetwork
+```
+
+## 查看局域网中能ping通的主机
+``` shell
+for /L %i IN (1,1,254) DO ping -w 2 -n 1 192.168.1.%i | grep TTL >> a.txt
+arp -a
 ```

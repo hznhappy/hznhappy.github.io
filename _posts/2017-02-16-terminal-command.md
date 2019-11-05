@@ -313,4 +313,10 @@ ip netns del ns_server
   64 bytes from 192.168.2.100: icmp_seq=3 ttl=64 time=0.209 ms
   64 bytes from 192.168.2.100: icmp_seq=4 ttl=64 time=0.154 ms
   64 bytes from 192.168.2.100: icmp_seq=5 ttl=64 time=0.164 ms
+
+  #添加用户到指定组
+  drwxrwx--- 1 root vboxsf 4096 Nov  4 14:18 sf_VMShare
+  #sf_VMShare属于vboxsf组，当前用户没有任何权限，可以添加当前用户到vboxsf组即可访问目录sv_VMShare
+  sudo usermod -aG vboxsf username
+  sudo usermod -aG vboxsf $(whoami)
   ```
