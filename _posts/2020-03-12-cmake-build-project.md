@@ -117,8 +117,28 @@ Call Stack (most recent call first):
 ```
 qt项目设置当中的CMake配置需要设置好DCMAKE_INSTALL_PREFIX字段，告诉CMake依赖库和编译器搜索目录，正确配置修改为：   
 ![qt-cmake-config](https://hznhappy.github.io/images/2020/qt-build-cmake/msys-makefile-result.png)   
+如果以上都设置好还是遇到报错：
+```
+Check for working C compiler: D:/msys64/mingw64/bin/gcc.exe -- broken
+CMake Error at D:/msys64/mingw64/share/cmake-3.11/Modules/CMakeTestCCompiler.cmake:52 (message):
+  The C compiler
 
-编译过程如果出现以下错误
+    "D:/msys64/mingw64/bin/gcc.exe"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: D:/QTProject/gerberview/gerberviews/build-gerberviews-Desktop_Qt_5_13_1_MinGW_64_bit-Debug/CMakeFiles/CMakeTmp
+
+    Run Build Command:"C:/usr/local/bin/make.exe" "cmTC_9fd2f/fast"
+    D:\QTProject\gerberview\gerberviews\build-gerberviews-Desktop_Qt_5_13_1_MinGW_64_bit-Debug\CMakeFiles\CMakeTmp/C:/usr/local/bin/make.exe  -f CMakeFiles/cmTC_9fd2f.dir/build.make CMakeFiles/cmTC_9fd2f.dir/build
+    make.exe: *** [cmTC_9fd2f/fast] Signal 127
+```
+
+看报错信息提示报错是执行make命令出错`Run Build Command:"C:/usr/local/bin/make.exe"` 修改CMake配置：   
+![qt-cmake-config](https://hznhappy.github.io/images/2020/qt-build-cmake/make-set.png)   
+编译过程如果出现以下错误   
 
 ```
 CMake Error at C:/msys64/mingw64/share/cmake-3.12/Modules/FindPackageHandleStandardArgs.cmake:137 (message):
@@ -128,5 +148,4 @@ wxWidgets_INCLUDE_DIRS) (Required is at least version "3.0.0")
 ```
 说明CMake配置设置还是不对，需要修改构建套件当中CMake generator为“MSYS Makefiles”，具体设置如下：   
 ![CMakeSetting](https://hznhappy.github.io/images/2020/qt-build-cmake/cmake-build-set.png)   
-
 设置完成以上步骤，如果没有报错就能在Qt-Creator当中开发和调试KiCad开源项目了。

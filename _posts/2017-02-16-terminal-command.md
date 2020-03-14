@@ -319,4 +319,12 @@ ip netns del ns_server
   #sf_VMShare属于vboxsf组，当前用户没有任何权限，可以添加当前用户到vboxsf组即可访问目录sv_VMShare
   sudo usermod -aG vboxsf username
   sudo usermod -aG vboxsf $(whoami)
+
+  #查找火狐浏览器的安装包内容
+  dpkg --get-selections | grep firefox
+
+  #命令结果输出火狐浏览器共有4个安装小包：firefox，firefox-locale-en ，firefox-locale-zh-hans ，unity-scope-firefoxbookmarks
+
+  #卸载安装小包
+  sudo apt-get purge firefox firefox-locale-en firefox-locale-zh-hans unity-scope-firefoxbookmarks
   ```
