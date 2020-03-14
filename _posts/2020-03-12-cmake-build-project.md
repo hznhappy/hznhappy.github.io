@@ -64,7 +64,7 @@ make install
 
 ## Qt-Creator配置CMake项目
 打开qt-creator，打开项目，选择项目CMakeLists.txt文件，选择构建套件，等待qt生成配置选项，如果报错如下：   
-![compiler错误](https://hznhappy.github.io/images/2020/qt-build-cmake/qt-cmake-build-err.PNG)    
+![compiler-failed](https://hznhappy.github.io/images/2020/qt-build-cmake/qt-cmake-build-err.PNG)    
 
 ```
 Starting to parse CMake project, using: "-DCMAKE_BUILD_TYPE:STRING=Debug", "-DCMAKE_CXX_COMPILER:STRING=C:/Qt/Qt5.13.1/Tools/mingw730_64/bin/g++.exe", "-DCMAKE_C_COMPILER:STRING=C:/Qt/Qt5.13.1/Tools/mingw730_64/bin/gcc.exe", "-DCMAKE_PREFIX_PATH:STRING=D:/msys64/mingw64", "-DQT_QMAKE_EXECUTABLE:STRING=C:/Qt/Qt5.13.1/5.13.1/mingw73_64/bin/qmake.exe".
@@ -84,7 +84,7 @@ CMake Error at C:/Program Files (x86)/CMake/share/cmake-3.14/Modules/CMakeTestCC
 qt的编译套件设置的编译器报错，改为之前MSYS2安装的mingw编译器，如下图：   
 ![compiler错误](https://hznhappy.github.io/images/2020/qt-build-cmake/builder-setting.png)  
 如果还是报错如下图所示：   
-![compiler错误](https://hznhappy.github.io/images/2020/qt-build-cmake/gcc-error.PNG)  
+![compiler-error](https://hznhappy.github.io/images/2020/qt-build-cmake/gcc-error.PNG)  
 ```
 Starting to parse CMake project, using: "-DCMAKE_BUILD_TYPE:STRING=Debug", "-DCMAKE_CXX_COMPILER:STRING=D:\msys64\mingw64\bin\g++.exe", "-DCMAKE_C_COMPILER:STRING=D:\msys64\mingw64\bin\gcc.exe", "-DCMAKE_PREFIX_PATH:STRING=D:/msys64/mingw64", "-DQT_QMAKE_EXECUTABLE:STRING=C:/Qt/Qt5.13.1/5.13.1/mingw73_64/bin/qmake.exe".
 The C compiler identification is unknown
@@ -116,7 +116,7 @@ Call Stack (most recent call first):
   common/CMakeLists.txt:28 (find_package)
 ```
 qt项目设置当中的CMake配置需要设置好DCMAKE_INSTALL_PREFIX字段，告诉CMake依赖库和编译器搜索目录，正确配置修改为：   
-![CMakeSetting](https://hznhappy.github.io/images/2020/qt-build-cmake/msys-makefile-result.PNG)   
+![qt-cmake-config](https://hznhappy.github.io/images/2020/qt-build-cmake/msys-makefile-result.png)   
 
 编译过程如果出现以下错误
 
