@@ -328,3 +328,16 @@ ip netns del ns_server
   #卸载安装小包
   sudo apt-get purge firefox firefox-locale-en firefox-locale-zh-hans unity-scope-firefoxbookmarks
   ```
+## sudo启动的程序无法使用普通用户模式下中文输入法
+```
+1. 创建 /etc/sudoers_env 加入以下内容
+
+GTK_IM_MODULE=xim
+QT_IM_MODULE=xim
+QT4_IM_MODULE=xim
+
+2. 执行 sudo visudo 加入以下内容
+
+Defaults env_keep += "XMODIFIERS"
+Defaults env_file="/etc/sudoers_env"
+```

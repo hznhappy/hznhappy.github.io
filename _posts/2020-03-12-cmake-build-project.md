@@ -148,4 +148,4 @@ wxWidgets_INCLUDE_DIRS) (Required is at least version "3.0.0")
 ```
 说明CMake配置设置还是不对，需要修改构建套件当中CMake generator为“MSYS Makefiles”，具体设置如下：   
 ![CMakeSetting](https://hznhappy.github.io/images/2020/qt-build-cmake/cmake-build-set.png)   
-设置完成以上步骤，如果没有报错就能在Qt-Creator当中开发和调试KiCad开源项目了。
+如果仍然报错，说明环境变量设置还是不正确，CMake找不到wxWidgets库，需要在系统环境变量添加`C:\msys64\usr\bin`到Path变量，即项目编译必须确保添加了`C:\msys64\mingw64;C:\msys64\mingw64\bin;C:\msys64\usr\bin;`三个变量到系统环境变量，设置完成以上步骤，如果没有报错就能在Qt-Creator当中开发和调试KiCad开源项目了。

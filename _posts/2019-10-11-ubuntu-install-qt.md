@@ -93,3 +93,21 @@ chmod +x qt-creator-linux-x86-opensource-2.4.1.bin
 ./qt-creator-linux-x86-opensource-2.4.1.bin
 ```
 根据安装向导完成qt开发工具qt creator的安装，至此安装完毕，可以开始qt编程开发。
+
+## Ubuntu18.04系统qt安装
+Ubuntu18.04系统安装qt5.11.2比较简单，下载完成qt软件`qt-opensource-linux-x64-5.11.2.run`之后，按步骤执行以下命令：
+``` bash
+./qt-opensource-linux-x64-5.10.1.run #安装到用户目录
+#或者安装到系统/opt目录
+sudo ./qt-opensource-linux-x64-5.10.1.run
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install build-essential
+sudo apt-get install gcc g++ cmake
+#运行qtcreator如果报错cannot find -lGL“ =可选安装：“libglu1-mesa-dev”
+sudo apt-get install libgl1-mesa-dev
+
+#编译如果报错error: GL/gl.h: No such file or directory
+sudo apt-get install mesa-common-dev
+```
