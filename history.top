@@ -1,0 +1,266 @@
+    1  lsmod
+    2  lspci
+    3  lspci -tv
+    4  cd /
+    5  cd media
+    6  ls
+    7  cd /mnt
+    8  ls
+    9  cd /bin
+   10  ls
+   11  cd /usr
+   12  ls
+   13  cd share
+   14  ls
+   15  cd ..
+   16  lsusb -tv
+   17  firewall-cmd --state
+   18  ps -ef
+   19  who
+   20  C
+   21  logout
+   22  ping www.baidu.com
+   23  ls -l |grep fb
+   24  ls
+   25  cd /
+   26  ls
+   27  cd dev
+   28  ls
+   29  ls -l |grep fb
+   30  lshw
+   31  shutdown -p 0
+   32  sudo shutdown -P 0
+   33  ls
+   34  cd /
+   35  ls
+   36  cd mnt
+   37  ls
+   38  cd ..
+   39  cd media
+   40  ls
+   41  cd ..
+   42  cd cdrom
+   43  ls
+   44  shutdwon -P 0
+   45  shutdown -P 0
+   46  cd /
+   47  cd mmt
+   48  cd mnt
+   49  ls
+   50  cd /
+   51  cd cdrow
+   52  cd cdrom
+   53  ls
+   54  cd /
+   55  ls
+   56  cd media
+   57  ls
+   58  cd /usr
+   59  ls
+   60  cd share
+   61  ls
+   62  cd /
+   63  ls
+   64  cd dev
+   65  ls
+   66  cd cdrom
+   67  ls
+   68  cd cdrom
+   69  ls -l
+   70  sudomount /dev/cdrom /media/cdrom
+   71  sudo mount /dev/cdrom /media/cdrom
+   72  sudo mount /dev/cdrom /media/
+   73  cd /media
+   74  ls
+   75  sudo ./VBoxLinuxAdditions.run 
+   76  gcc -v
+   77  sudo apt-get install -y dkms build-essential linux-header-generic linux-header-$(uname-r)
+   78  sudo apt-get install -y dkms build-essential linux-headers-generic linux-headers-$(uname-r)
+   79  sudo ./VBoxLinuxAdditions.run 
+   80  reboot
+   81  cd /
+   82  cd /mnt
+   83  ls
+   84  ls -l
+   85  cd media
+   86  ls
+   87  cd /
+   88  sudo usemod
+   89  sudo usermod -aG $(whoami)
+   90  sudo usermod -aG vboxsf $(whoami)
+   91  cd mnt
+   92  ls -l
+   93  whoami
+   94  sudo usermod -aG vboxsf top
+   95  cd mnt
+   96  sudo cd mnt
+   97  sudo su
+   98  who
+   99  whoami
+  100  ls /dev
+  101  export QT_QPA_PLATFORM=linuxfb:fb=/dev/fb0
+  102  cat /etc/profile
+  103  shutdown -P 0
+  104  cd /media
+  105  ls
+  106  cd /dev
+  107  ls
+  108  cd /media
+  109  ls
+  110  cd mnt
+  111  cd /mnt
+  112  ls
+  113  tar -xvf CollectServer.zip
+  114  cd /Vedios
+  115  cd /
+  116  ls
+  117  cd home
+  118  ls
+  119  cd top
+  120  ls
+  121  mv /mnt/CollectServer.zip /home/top
+  122  ls
+  123  gzip -h
+  124  gzip -dvf CollectServer.zip
+  125  tar --help
+  126  ls
+  127  pwd
+  128  unzip CollectServer.zip
+  129  sudo apt install unzip
+  130  unzip CollectServer.zip
+  131  ls
+  132  cd lib
+  133  ls
+  134  CollectServer_V1.o
+  135  CollectServer_V1.0
+  136  ./CollectServer_V1.0
+  137  ./CollectServer_V1.0.sh
+  138  move libQt5Widgets.so.5 /usr/lib
+  139  mv libQt5Widgets.so.5 /usr/lib
+  140  ls -l
+  141  sudo mv libQt5Widgets.so.5 /usr/lib
+  142  ./CollectServer_V1.0.sh
+  143  ls -l
+  144  sudo mv *.so.* /usr/lib
+  145  ls -l
+  146  ./CollectServer_V1.0.sh
+  147  ./CollectServer_V1.0.sh -qpa -LinuxFb
+  148  ./CollectServer_V1.0.sh linuxfb -display"LinuxFb:/dev/fb0"
+  149  ./CollectServer_V1.0.sh -platform linuxfb -display"LinuxFb:/dev/fb0"
+  150  ./CollectServer_V1.0.sh -platform linuxfb -display"LinuxFb:/dev/fb1"
+  151  ./CollectServer_V1.0.sh -platform linuxfb:fb="/dev/fb0"
+  152  export QT_DEBUG_PLUGINS=1
+  153  ./CollectServer_V1.0.sh -platform linuxfb:fb="/dev/fb0"
+  154  LSB_RELEASE
+  155  LSB_release -A
+  156  lsb_release -a
+  157  export QT_DEBUG_PLUGINS=1
+  158  ./CollectServer_V1.0.sh -platform linuxfb:fb="/dev/fb0"
+  159  cd /usr/lib
+  160  cd x
+  161  cd X86_64-linux-gnu
+  162  cd x86_64-linux-gnu
+  163  ls
+  164  ls | grep qt
+  165  cd /
+  166  ls
+  167  cd home/top
+  168  ls
+  169  cd lib
+  170  ./CollectServer_V1.0.sh -platform linuxfb:fb="/dev/fb0"
+  171  cd /dev
+  172  ls
+  173  cd /
+  174  ./configure -help
+  175  cd /home/top
+  176  cd lib
+  177  ls
+  178  CollectSer_V1.0
+  179  ./CollectSer_V1.0
+  180  ./CollectServer_V1.0
+  181  ./CollectServer_V1.0 -platform linuxfb:/dev/fb0
+  182  ./CollectServer_V1.0 -platform linuxfb:fb=/dev/fb0
+  183  cd /usr/lib
+  184  ls
+  185  ls -l
+  186  ./CollectServer_V1.0 -platform linuxfb:fb=/dev/fb0
+  187  cd /home/top/lib
+  188  ./CollectServer_V1.0 -platform linuxfb:fb=/dev/fb0
+  189  mv /mnt/platform.tar.xz ./
+  190  ls /mnt
+  191  mv /mnt/platforms.tar.xz ./
+  192  ls
+  193  tar xvf platforms.tar.xz
+  194  ls
+  195  ./CollectServer_V1.0 -platform linuxfb:fb=/dev/fb0
+  196  ldd /platform/libqlinuxfb.so.1
+  197  ldd /platforms/libqlinuxfb.so.1
+  198  ldd /platforms/libqlinuxfb.so
+  199  cd platforms
+  200  ls
+  201  ldd libqlinuxfb.so
+  202  ./CollectServer_V1.0
+  203  cd ..
+  204  ./CollectServer_V1.0
+  205  mv /mnt/libQt5XcbQpa.so.5.11.2 ./platforms
+  206  ./CollectServer_V1.0
+  207  cd platforms
+  208  ls
+  209  mv libQt5XcbQpa.so.5.11.2 libQt5XcbQpa.so.5
+  210  ls
+  211  cd ..
+  212  ./CollectServer_V1.0
+  213  sudo ln -s /platforms/libQt5XcbQpa.so.5 /usr/lib libQt5XcbQpa.so.5
+  214  sudo ln -s /platforms/libQt5XcbQpa.so.5 /usr/lib/libQt5XcbQpa.so.5
+  215  ./CollectServer_V1.0
+  216  ls platforms/
+  217  ls -l platforms/
+  218  chgrp top platforms/libQt5XcbQpa.so.5
+  219  ls -l platforms/
+  220  sudo chmod o+x libQt5XcbQpa.so.5
+  221  sudo chmod o+x platforms/libQt5XcbQpa.so.5
+  222  ./CollectServer_V1.0
+  223  ls -l platfomrs
+  224  ls -l platfomrs/
+  225  cd platforms
+  226  ls -l
+  227  ./CollectServer_V1.0
+  228  cd ..
+  229  ./CollectServer_V1.0
+  230  ./CollectServer_V1.0 -platform linuxfb:fb=/dev/fb0
+  231  apt-get libfontconfig.so
+  232  apt-get libfontconfig
+  233  apt-get install libfontconfig1
+  234  sudo apt-get install libfontconfig1
+  235  ./CollectServer_V1.0 -platform linuxfb:fb=/dev/fb0
+  236  cd /usr/lib
+  237  ls | grep libfon
+  238  cd /lib
+  239  ls | grep libonf
+  240  ls | grep libfon
+  241  cd /
+  242  find libfont*.so
+  243  find / libfont*.so
+  244  find / -name "libfont*.so.*"
+  245  sudo find / -name "libfont*.so.*"
+  246  ./CollectServer_V1.0 -platform linuxfb:fb=/dev/fb0
+  247  cd /home/top/lib
+  248  ./CollectServer_V1.0 -platform linuxfb:fb=/dev/fb0
+  249  ls
+  250  tar -xvf libQt5DBus.so.5.11.tar.xz
+  251  ls
+  252  mv libQt5DBus.so.5.11.2 libQt5DBus.so.5
+  253  ls
+  254  ./CollectServer_V1.0 -platform linuxfb:fb=/dev/fb0
+  255  cd /mnnt
+  256  ls
+  257  cd /mnt
+  258  ls
+  259  cd -
+  260  ls
+  261  cd lib
+  262  ls
+  263  sudo ./CollectServer_V1.0 -platform linuxfb:fb=/dev/fb0
+  264  history
+  265* cat history 
+  266  history >> /mnt/history.top

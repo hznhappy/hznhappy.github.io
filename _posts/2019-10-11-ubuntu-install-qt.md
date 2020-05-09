@@ -107,6 +107,18 @@ sudo apt-get install build-essential
 sudo apt-get install gcc g++ cmake
 #运行qtcreator如果报错cannot find -lGL“ =可选安装：“libglu1-mesa-dev”
 sudo apt-get install libgl1-mesa-dev
+#如果还报错cannot find -lGL
+$ locate libGL.so
+/snap/gnome-3-26-1604/70/usr/lib/x86_64-linux-gnu/mesa/libGL.so.1
+/snap/gnome-3-26-1604/70/usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0
+/snap/gnome-3-26-1604/98/usr/lib/x86_64-linux-gnu/mesa/libGL.so.1
+/snap/gnome-3-26-1604/98/usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0
+/snap/gnome-3-28-1804/116/usr/lib/x86_64-linux-gnu/libGL.so.1
+/snap/gnome-3-28-1804/116/usr/lib/x86_64-linux-gnu/libGL.so.1.0.0
+/usr/lib/x86_64-linux-gnu/libGL.so.1
+/usr/lib/x86_64-linux-gnu/libGL.so.1.0.0
+$ sudo ln -s /usr/lib/x86_64-linux-gnu/libGL.so.1 /usr/lib/libGL.so
+
 
 #编译如果报错error: GL/gl.h: No such file or directory
 sudo apt-get install mesa-common-dev
