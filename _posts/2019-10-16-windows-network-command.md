@@ -170,4 +170,6 @@ netsh wlan show hostednetwork
 ``` shell
 for /L %i IN (1,1,254) DO ping -w 2 -n 1 192.168.1.%i | grep TTL >> a.txt
 arp -a
+#查看可以通过TCP/IP连接4370端口的ip地址
+for /L %i IN (1,1,255) DO telnet 192.168.1.%i 4370| grep Connected >> tcp.txt
 ```

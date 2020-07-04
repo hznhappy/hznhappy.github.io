@@ -4,12 +4,12 @@
 [ -d FILE ]  如果 FILE 存在且是一个目录则为真。  
 [ -e FILE ]  如果 FILE 存在则为真。  
 [ -f FILE ]  如果 FILE 存在且是一个普通文件则为真。  
-[ -g FILE ] 如果 FILE 存在且已经设置了SGID则为真。 [ -h FILE ]  如果 FILE 存在且是一个符号连接则为真。  
+[ -g FILE ]  如果 FILE 存在且已经设置了SGID则为真。 [ -h FILE ]  如果 FILE 存在且是一个符号连接则为真。  
 [ -k FILE ]  如果 FILE 存在且已经设置了粘制位则为真。  
 [ -p FILE ]  如果 FILE 存在且是一个名字管道(F如果O)则为真。  
 [ -r FILE ]  如果 FILE 存在且是可读的则为真。  
 [ -s FILE ]  如果 FILE 存在且大小不为0则为真。  
-[ -t FD ]  如果文件描述符 FD 打开且指向一个终端则为真。  
+[ -t FD ]    如果文件描述符 FD 打开且指向一个终端则为真。  
 [ -u FILE ]  如果 FILE 存在且设置了SUID (set user ID)则为真。  
 [ -w FILE ]  如果 FILE 如果 FILE 存在且是可写的则为真。  
 [ -x FILE ]  如果 FILE 存在且是可执行的则为真。  
@@ -90,3 +90,16 @@ cd /e/DevPro/Lib/wxWidgets-3.0.2/build/msw
  cd /e/Library/wxWidgets-3.0.4/build/msw
  mingw32-make.exe -f makefile.gcc SHARED=1 UNICODE=1 BUILD=debug
  mingw32-make.exe -f makefile.gcc SHARED=1 UNICODE=1 BUILD=release
+
+
+ SIGHUP        1       Term    Hangup detected on controlling terminal
+                                or death of controlling process
+  SIGINT        2       Term    Interrupt from keyboard
+  SIGQUIT       3       Core    Quit from keyboard
+  SIGILL        4       Core    Illegal Instruction
+  SIGABRT       6       Core    Abort signal from abort(3)
+  SIGFPE        8       Core    Floating point exception
+  SIGKILL       9       Term    Kill signal
+  SIGSEGV      11       Core    Invalid memory reference
+  SIGPIPE      13       Term    Broken pipe: write to pipe with no
+  SIGTERM      15       Term    Termination signal
